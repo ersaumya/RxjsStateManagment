@@ -8,10 +8,6 @@ import { Store } from './store';
 })
 export class AppComponent {
 
-  todos$=this.store.select<any[]>('todos');
-
-  constructor(private store:Store){
-    this.store.set('todos',[{id:1,name:'Eat dinner'},{id:2,name:'washing cloth'}]);
-  }
+ 
 
 }

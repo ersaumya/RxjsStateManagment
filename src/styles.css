@@ -81,3 +81,7 @@ songs-listened {
   flex: 0 0 33%;
   margin: 0 10px;
 }
+
+.songs{
+  color:white
+}
