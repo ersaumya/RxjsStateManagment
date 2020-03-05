@@ -1,4 +1,8 @@
 <div class="songs">
-    songs-listened works!
+    <div *ngFor="let item of listened$ | async">
+        {{item.artist}}
+        <br>
+        {{item.track}}
+    </div>
 </div>
 

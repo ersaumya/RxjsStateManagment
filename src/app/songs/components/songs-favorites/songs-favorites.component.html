@@ -1,4 +1,8 @@
 <div class="songs">
-    songs-favorites works!
+    <div *ngFor="let item of favorites$ | async">
+        {{item.artist}}
+        <br>
+        {{item.track}}
+    </div>
 </div>
 
