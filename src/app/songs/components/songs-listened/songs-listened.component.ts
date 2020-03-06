@@ -2,6 +2,7 @@ import { Store } from './../../../store';
 import { Component, OnInit } from '@angular/core';
 import { SongsService } from '../../services/songs.service';
 import { Observable } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'songs-listened',
@@ -13,8 +14,9 @@ export class SongsListenedComponent implements OnInit {
 
   constructor(private store: Store, private songService: SongsService) { }
 
-  ngOnInit(): void {
-    this.listened$=this.store.select('playlist');
+  ngOnInit() {
+    this.listened$=this.store.select<any>('playlist')
+      .pipe(filter(Boolean), map(playlist => playlist.filter(track => track.listened)));
   }
 
 }
