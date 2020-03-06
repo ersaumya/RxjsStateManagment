@@ -14,4 +14,8 @@ export class SongsService {
 
   getPlaylist$:Observable<Song[]>= this.httpClient.get<Song[]>('http://localhost:3000/playlist')
     .pipe(map(res => res),tap(next => this.store.set('playlist', next)));
+
+    toggle(event:any){
+      console.log(event);
+    }
 }

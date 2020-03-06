@@ -19,4 +19,8 @@ export class SongsListenedComponent implements OnInit {
       .pipe(filter(Boolean), map(playlist => playlist.filter(track => track.listened)));
   }
 
+  onToggle(event) {
+    this.songService.toggle(event);
+  }
+
 }

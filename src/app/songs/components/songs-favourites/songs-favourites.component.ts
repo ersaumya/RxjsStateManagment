@@ -20,4 +20,9 @@ export class SongsFavouritesComponent implements OnInit {
       .pipe(filter(Boolean),map(playlist => playlist.filter(track=> track.favourite)));
   }
 
+  onToggle(event) {
+    this.songService.toggle(event);
+  }
+
+
 }
