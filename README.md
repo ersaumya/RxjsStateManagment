@@ -1,6 +1,7 @@
 # RxjsStateManagment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
+This is an Angular 9 application(songs playlist application) implemented using rxjs behavior subject as state managment.
+
 
 ## Development server
 
